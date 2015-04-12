@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo element selector</title>
+	<style>
+		p::first-line { /*All first line of p element is styled*/
+			color:red;
+		}
+		ul::first-line{ /*First line of the unordered list is styled*/
+			color:orange;
+		}
+		p::first-letter{
+			font-size: 24px;
+			color: #09C;
+		}
+		p::before{
+			content: "String change "; /*string change is added to the paragraph*/
+		}
+	</style>
+</head>
+<body>
+	<!-- M in my is styled to 24px -->
+	<p>My paragraph content ...<br /> keeps going ... <br>and going ...</p>
+	<p>First letter on this second paragraph is also style to 24px</p>
+	<ul>
+		<li>first item</li> <!-- first line -->
+		<li>second item</li>
+		<li>third item</li>
+	</ul>
+</body>
+</html>
