@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Viewport percentage</title>
+	<style>
+		body{ margin: 0;}
+		#div1{
+			/*width: 50vw; 50% viewport width	*/
+			width: 50vmax; /*vmax represent 1% w/c ever is larger vh or vw
+			vmin represent 1% whichever is smaller*/
+			height: 50vh; /*50% viewport height*/
+			background: #A3CFFF; /*light blue color*/
+			font-size: 3vw; /*3% of the viewport width*/
+			/*margin:  25vh 25vw; 25% viewport height and viewport width */
+			/*no spaces in between the number and unit*/
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">div content ...</div>
+
+	
+</body>
+</html>
+
+<!-- go to www.developphp.com/lib/CSS/Length-Values --> 
+<!-- Viewport Percentage Lenghts -->
+<!-- vw(viewport width) - unit equal to 1% of the window width -->
+<!-- vh (viewport height) - unit equal to 1% of the window height -->
+<!-- vmin (viewport minimum) unit equal to 1% of whichever is smaller of "vw" or "vh" -->
+<!-- vmax (viewport maximum) unit equal to 1% of whichever is larger of "vw" or "vh" -->
