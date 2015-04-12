@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox Website Layout</title>
+<style>
+	body{margin: 0; }
+	/*body child div element*/
+	body > div {
+		display: flex; 
+		flex-flow: row wrap; /*all the elements are flowing inside the flexbox*/
+	}
+	body > div > header,nav,main,aside,footer {
+		background: #ccc; border-radius: 7px; margin: 5px; padding: 20px;
+	}
+	body > div > header {
+		order: 1;  /*order of appearance  in the flexbox*/  
+		height: 100px; /*ordinary height setting*/
+		flex: 0 1 100%; /*100% is the width of the header*/
+	}
+	body > div > nav{
+		order: 2; 
+		flex: 0 1 200px; /*200px fixed width*/
+	}
+	body > div > main {
+		order: 3;
+		min-height:400px; /*jus to give it a height*/
+		flex: 1; /*can be auto*/
+	}
+	body >div> aside {
+		order: 4;
+		flex: 0 1 200px; /*200px is the width*/
+	}
+	body > div > footer {
+		order: 5;
+		height: 100px;
+		flex: 0 1 100%; /*100% is used to expand the whole width*/
+	}
+</style>
+</head>
+<body>
+	<div> <!-- has 5 element called flex items -->
+		<header>Header</header>
+		<nav>Navigation</nav>
+		<main>Main Content</main>
+		<aside>Aside Content</aside>
+		<footer>Footer</footer>
+	</div>
+</body>
+</html> 
