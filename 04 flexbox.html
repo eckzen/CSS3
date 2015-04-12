@@ -9,29 +9,30 @@
 	body > div {
 		display: flex; 
 		flex-flow: row wrap; /*all the elements are flowing inside the flexbox*/
+		min-width: 800px; /*to fix aside section from collapsing*/
 	}
-	body > div > header,nav,main,aside,footer {
+	body > div /*div:nth-child(1) instead of div*/> header,nav,main,aside,footer {
 		background: #ccc; border-radius: 7px; margin: 5px; padding: 20px;
 	}
-	body > div > header {
+	body > div /*div:nth-child(1) instead of div*/> header {
 		order: 1;  /*order of appearance  in the flexbox*/  
 		height: 100px; /*ordinary height setting*/
 		flex: 0 1 100%; /*100% is the width of the header*/
 	}
-	body > div > nav{
+	body > div /*div:nth-child(1) instead of div*/> nav{
 		order: 2; 
 		flex: 0 1 200px; /*200px fixed width*/
 	}
-	body > div > main {
+	body > div /*div:nth-child(1) instead of div*/> main {
 		order: 3;
 		min-height:400px; /*jus to give it a height*/
 		flex: 1; /*can be auto*/
 	}
-	body >div> aside {
+	body > div /*div:nth-child(1) instead of div*/> aside {
 		order: 4;
 		flex: 0 1 200px; /*200px is the width*/
 	}
-	body > div > footer {
+	body > div /*div:nth-child(1) instead of div*/> footer {
 		order: 5;
 		height: 100px;
 		flex: 0 1 100%; /*100% is used to expand the whole width*/
@@ -47,8 +48,11 @@
 		<footer>Footer</footer>
 	</div>
 </body>
-</html> 
+</html>
 <!-- 
+
+div:nth-child(1) instead of div  to target a specific div 
+
 Investigate the values:
 	flex-direction
 	flex-wrap
