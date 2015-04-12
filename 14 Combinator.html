@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Combinator Selectors</title>
+	<style>
+		/*Direct Descendant uses a space*/
+		div li{ 
+			color: red;
+		}
+		/*Child combinator uses GREATER THAN symbol and targets direct child*/
+		div > p { /*targets the direct children of an element*/
+			color: green;
+		}
+		/*Adjacent sibling combinator*/
+		/*Only the direct adjacent sibling is styled*/
+		h3 + p{ /*Anything that comes after H3 is styled*/
+			font-family: "Comic SansMS", cursive;
+			text-decoration: underline;
+		}
+		/*General sibling selector*/
+		h3 ~ p { /*it styles ALL the element AFTER the h3 element*/
+			font-style: italic;
+			color: : #09F;
+		}
+
+	</style>
+</head>
+<body>
+<!-- 	Descendant Combinator
+	div li{ color: red;}  <<< li is direct descendant of div element -->
+	<!-- it doesnt matter how deeply nested the element inside the div -->
+	<div>
+		<ul> <!-- direct child -->
+			<li>List Item</li> <!-- direct descendant -->
+			<li>List Item</li>
+			<li>List Item</li>
+		</ul>
+	</div>
+	<!-- Direct child combinator -->
+	<div>
+		<p>Paragraph content ...</p> <!-- only the direct child is styled -->
+		<article>
+			<p>Paragraph content ...</p> <!-- not direct child but descendant -->
+		</article>
+	</div>
+	<!-- Adjacent sibling -->
+	<!-- All are child elements --> 
+	<h3>Some stuff</h3>
+	<p>Stuff inside my paragraph</p> <!-- only this p element is styled -->
+	<p>Stuff inside my paragraph</p>
+	<p>Stuff inside my paragraph</p>
+	<h3>More stuff</h3>
+	<p>Stuff inside my paragraph</p> <!-- only this p element is styled -->
+	<p>Stuff inside my paragraph</p>
+	<p>Stuff inside my paragraph</p>
+	<!-- General sibling selector -->
+	<h2>After this all paragraphs are styled italic</h2>
+	<p>Stuff inside the paragraph</p> <!-- styled -->
+	<p>Stuff inside the paragraph</p> <!-- styled -->
+	<h3>H3</h3>
+	<p>Stuff inside the paragraph</p> <!-- styled -->
+	<p>Stuff inside the paragraph</p> <!-- styled -->
+	<div>Stuff inside a div ...</div>
+	<p>Stuff inside the paragraph</p> <!-- styled -->
+</body>
+</html> 
