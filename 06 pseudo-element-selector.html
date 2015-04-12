@@ -14,8 +14,12 @@
 			font-size: 24px;
 			color: #09C;
 		}
-		p::before{
-			content: "String change "; /*string change is added to the paragraph*/
+		p::before{ 
+			content: "String change "; /*string change is added before  the paragraph element*/
+		}
+		p::after{ /*string is added at the end of the paragraph*/
+			content:" ... String";
+			color: blue;
 		}
 	</style>
 </head>
@@ -30,3 +34,11 @@
 	</ul>
 </body>
 </html>
+
+<!--
+	 PSEUDO Elements Selectors only four. With two colons after the element.
+		e::before
+		e::after
+		e::first-line
+		e::first-letter
+ -->
